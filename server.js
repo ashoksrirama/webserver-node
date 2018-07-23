@@ -55,6 +55,13 @@ app.get('/bad', (req, res) => {
         error: 'Error fulfilling the request'
     });
 });
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        projectTitle: 'Projects Page'
+    });
+});
+
 app.listen(port, () => {
     console.log(`Server is up on ${port} port.`);
 });
